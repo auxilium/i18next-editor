@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Uncomment to make IE8 render like IE7 -->
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>i18next Editor</title>
+
+  <!-- Included CSS Files -->
+  <link rel="stylesheet" href="/stylesheets/foundation.min.css" />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href=" /stylesheets/font-awesome.css" />
+
+  <!--[if IE 7]>
+    <link rel="stylesheet" href="/stylesheets/font-awesome-ie7.css" />
+  <![endif]-->
+
+  <script src="/javascripts/modernizr.foundation.js"></script>
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <div class="container top-bar">
+    <div class="twelve columns">
+      <nav class="top-bar">
+        <ul>
+          <!-- Title Area -->
+          <li class="name">
+            <h1><a href="/">i18Next Editor</a></h1>
+          </li>
+          <li class="toggle-topbar"><a href="#"></a></li>
+        </ul>
+
+        <section>
+          <ul class="left">
+            <li class="divider"></li>
+            <li><a href="http://github.com/auxilium/"><i class="icon-github"></i> Github</a></li>
+            <li class="divider"></li>
+          </ul>
+          <ul class="right">
+            <li class="divider"></li>
+            <li class="has-dropdown">
+              <a href="#">About</a>
+              <ul class="dropdown">
+                <li><label>Credits</label></li>
+                <li><a href="http://www.auxilium.nl">Auxilium B.V.</a></li>
+                <li><a href="http://manuel.manuelles.nl"><i class="icon-user"></i> Manuel van Rijn</a></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+  </div>
+
+
+  <div class="container twelve columns" id="wrapper">
+
+    <div class="row">
+      <div class="twelve columns">
+        <h2>i18Next language editor</h2>
+        <h5 class="subheader">
+          This simple tool will help you editing your language files. Just specify the <code>source</code> JSON and optionally the <code>target</code> JSON to generate a form.<br /><br />
+          After you've finished editing the value's you can quickly reverse the value's to your JSON language file.
+        </h5>
+      </div>
+      <hr />
+    </div>
+    <div class="row">
+      <div class="twelve columns">
+        <dl class="tabs contained" id="view_switcher">
+          <dt>View:</dt>
+          <dd class="active source_tab"><a href="#source">Source</a></dd>
+          <dd class="editor_tab"><a href="#editor">Editor</a></dd>
+          <dd class="eight offset-by-one"><div id="message" class="alert-box secondary">Good to go</div></dd>
+        </dl>
+        <ul class="tabs-content contained">
+          <li class="active" id="sourceTab">
+            <div class="row">
+              <div class="six columns">
+                <button class="button tiny secondary prettify right" data-target="#source_text"><i class="icon-ok"></i> Prettify</button>
+              </div>
+              <div class="six columns">
+                <button class="button tiny secondary prettify right" data-target="#target_text"><i class="icon-ok"></i> Prettify</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="six columns">
+                <textarea id="source_text" placeholder="Source language JSON" rows="20">{"app":{"general":{"backbutton":"terug"},"start":{"index":{"title":"Startpagina","buttons":{"start":"<span class='ui-btn-inner ui-btn-corner-all'><span class='ui-btn-text'>Start</span></span>","favorites":"<span class='ui-btn-inner'><span class='ui-btn-text'>Favorieten</span><span class='ui-icon ui-icon-star ui-icon-shadow'>&nbsp;</span></span>","settings":"<span class='ui-btn-inner'><span class='ui-btn-text'>Instellingen</span><span class='ui-icon ui-icon-gear ui-icon-shadow'>&nbsp;</span></span>"}}},"home":{"index":{"title":"Archicard | Delft"}},"map":{"index":{"title":"Kaart","buttons":{"locateme":"<span class='ui-btn-inner ui-btn-corner-all'><span class='ui-btn-text'>mijn locatie</span><span class='ui-icon ui-icon-map-marker ui-icon-shadow'>&nbsp;</span></span>"}}},"dating":{"index":{"title":"Kenmerken"},"windowsdoors":{"title":"Vensters en Deuren","buttons":{"map":"<span class='ui-btn-inner ui-corner-left'><span class='ui-btn-text'>kaart</span><span class='ui-icon ui-icon-map-marker ui-icon-shadow'>&nbsp;</span></span>","timeline":"<span class='ui-btn-inner ui-corner-right ui-controlgroup-last'><span class='ui-btn-text'>tijdlijn</span><span class='ui-icon ui-icon-time ui-icon-shadow'>&nbsp;</span></span>"}}},"style":{"index":{"title":"Datering en Stijl"}},"contact":{"index":{"title":"Contact en Info"}},"timeline":{"index":{"title":"Tijdlijn van Delft"}},"wikipedia":{"index":{"title":"Wikipedia"}}},"home":{"map":{"title":"Kaart","subtitle":"Lorem Ipsum is simply dummy text of the printing and typesetting"},"dating":{"title":"Zelf dateren","subtitle":"Lorem Ipsum is simply dummy text of the printing and typesetting"},"style":{"title":"Bouwstijlen","subtitle":"Lorem Ipsum is simply dummy text of the printing and typesetting"},"timeline":{"title":"Tijdlijn van Delft","subtitle":"Lorem Ipsum is simply dummy text of the printing and typesetting"},"contact":{"title":"Contact en Info","subtitle":"Lorem Ipsum is simply dummy text of the printing and typesetting"}},"dating":{"windowsdoors":{"title":"Vensters en Deuren","subtitle":"Lorem Ipsum is simply dummy text of the printing and typesetting"},"facades":{"title":"Gevels","subtitle":"Lorem Ipsum is simply dummy text of the printing and typesetting"},"others":{"title":"Overigen","subtitle":"Lorem Ipsum is simply dummy text of the printing and typesetting"}},"style":{}}</textarea>
+              </div>
+              <div class="six columns">
+                <textarea id="target_text" placeholder="Target language JSON" rows="20"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="twelve columns">
+                <button class="button right" id="json_to_editor"><i class="icon-cogs"></i> Generate input fields</button>
+              </div>
+            </div>
+          </li>
+          <li id="editorTab">
+            <table class="twelve">
+              <thead>
+                <tr>
+                  <th class="two">key</th>
+                  <th class="five">source value</th>
+                  <th class="five">target value</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+            <div class="row">
+              <div class="twelve columns">
+                <button id="editor_to_json" class="button right"><i class="icon-magic"></i> Generate JSON</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="/javascripts/foundation.min.js"></script>
+  <script src="/javascripts/jquery.to_json.js"></script>
+  <script src="/javascripts/app.js"></script>
+</body>
+</html>

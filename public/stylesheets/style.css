@@ -1,0 +1,25 @@
+div.top-bar {
+  position: fixed;
+  z-index: 1000;
+}
+nav.top-bar {
+  margin:0;
+}
+#wrapper {
+  margin-top: 50px;
+}
+#editorTab table tbody input {
+  margin: 0;
+}
+#editorTab table tbody tr td {
+  vertical-align: middle;
+  padding: 3px 10px;
+}
+#editorTab table tbody tr.focus {
+  background: #E6E6E6;
+}
+
+div.alert-box {
+  padding: 4px 7px 7px;
+  font-size: 13px;
+}
